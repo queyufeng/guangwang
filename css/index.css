@@ -1,0 +1,517 @@
+
+
+/*banner*/
+.banner_wrap{
+    height: 593px;
+    min-width: 1100px;
+    position: relative;
+}
+
+
+
+/* 轮播图点击按钮 */
+.banner_wrap .point_wrap{
+    width:218px;
+    height: 30px;
+    background: url("../images/next&prev_line.png")no-repeat left center;
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    margin-left: -109px;
+    z-index: 999;
+}
+.banner_wrap .point_wrap ._prev,.banner_wrap .point_wrap ._next{
+    width: 28px;
+    height: 28px;
+    display: inline-block;
+}
+.banner_wrap .point_wrap ._prev{
+    background: url("../images/prev_jiantou.png");
+    float: left;
+}
+.banner_wrap .point_wrap ._next{
+    background: url("../images/next_jiantou.png");
+    float: right;
+}
+.banner_wrap .point_wrap ._prev:hover{
+    background: url("../images/prev_jiantou_hover.png");
+}
+.banner_wrap .point_wrap ._next:hover{
+    background: url("../images/next_jiantou_hover.png");
+}
+
+.banner_wrap .point_wrap ._prev:hover,.banner_wrap .point_wrap ._next:hover{
+    animation: fn 1s;
+}
+
+/* 弹性伸缩运动动画 */
+@keyframes fn {
+    0% {
+        transform: scale(1.2, 0.8);
+    }
+    1% {
+        transform: scale(1.18, 0.82);
+    }
+    2% {
+        transform: scale(1.16, 0.84);
+    }
+    3% {
+        transform: scale(1.13, 0.87);
+    }
+    4% {
+        transform: scale(1.1, 0.9);
+    }
+    5% {
+        transform: scale(1.07, 0.93);
+    }
+    6% {
+        transform: scale(1.04, 0.96);
+    }
+    7% {
+        transform: scale(1.01, 0.99);
+    }
+    8% {
+        transform: scale(0.99, 1.01);
+    }
+    9% {
+        transform: scale(0.97, 1.03);
+    }
+    10% {
+        transform: scale(0.95, 1.05);
+    }
+    11% {
+        transform: scale(0.94, 1.06);
+    }
+    12% {
+        transform: scale(0.93, 1.07);
+    }
+    13% {
+        transform: scale(0.93, 1.07);
+    }
+    14% {
+        transform: scale(0.93, 1.07);
+    }
+    15% {
+        transform: scale(0.93, 1.07);
+    }
+    16% {
+        transform: scale(0.94, 1.06);
+    }
+    17% {
+        transform: scale(0.94, 1.06);
+    }
+    18% {
+        transform: scale(0.95, 1.05);
+    }
+    19% {
+        transform: scale(0.96, 1.04);
+    }
+    20% {
+        transform: scale(0.98, 1.02);
+    }
+    21% {
+        transform: scale(0.99, 1.01);
+    }
+    22% {
+        transform: scale(1, 1);
+    }
+    23% {
+        transform: scale(1, 1);
+    }
+    24% {
+        transform: scale(1.01, 0.99);
+    }
+    25% {
+        transform: scale(1.02, 0.98);
+    }
+    26% {
+        transform: scale(1.02, 0.98);
+    }
+    27% {
+        transform: scale(1.02, 0.98);
+    }
+    28% {
+        transform: scale(1.03, 0.97);
+    }
+    29% {
+        transform: scale(1.03, 0.97);
+    }
+    30% {
+        transform: scale(1.02, 0.98);
+    }
+    31% {
+        transform: scale(1.02, 0.98);
+    }
+    32% {
+        transform: scale(1.02, 0.98);
+    }
+    33% {
+        transform: scale(1.02, 0.98);
+    }
+    34% {
+        transform: scale(1.01, 0.99);
+    }
+    35% {
+        transform: scale(1.01, 0.99);
+    }
+    36% {
+        transform: scale(1.01, 0.99);
+    }
+    37% {
+        transform: scale(1, 1);
+    }
+    38% {
+        transform: scale(1, 1);
+    }
+    39% {
+        transform: scale(1, 1);
+    }
+    40% {
+        transform: scale(0.99, 1.01);
+    }
+    41% {
+        transform: scale(0.99, 1.01);
+    }
+    42% {
+        transform: scale(0.99, 1.01);
+    }
+
+    43% {
+        transform: scale(0.99, 1.01);
+    }
+    44% {
+        transform: scale(0.99, 1.01);
+    }
+    45% {
+        transform: scale(0.99, 1.01);
+    }
+    46% {
+        transform: scale(0.99, 1.01);
+    }
+    47% {
+        transform: scale(0.99, 1.01);
+    }
+    48% {
+        transform: scale(0.99, 1.01);
+    }
+    49% {
+        transform: scale(1, 1);
+    }
+
+}
+        /*点击按钮盒子内容*/
+.banner_wrap .point_wrap .point{
+    width: 46px;
+    height: 14px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -23px;
+    margin-top: -7px;
+    background: url("../images/next&prev_mbg01.png") no-repeat left top,url("../images/next&prev_mbg03.png") no-repeat right top;
+}
+.banner_wrap .point_wrap .point .point_box{
+    width: 35px;
+    height: 100%;
+    margin: 0 auto;
+    background: url("../images/next&prev_mbg02.png");
+    position: relative;
+}
+.banner_wrap .point_wrap .point .point_box span{
+    width:6px;
+    height:6px;
+    display: inline-block;
+    background: url("../images/next&prev_others.png");
+    /*position: absolute;*/
+    /*top:50%;*/
+    /*margin-top: -3px;*/
+    float: left;
+    margin-top: 4px;
+    margin-right: 1px;
+}
+.banner_wrap .point_wrap .point .point_box .now{
+    background: url("../images/next&prev_now.png");
+}
+.banner_wrap .point_wrap .point .point_box .b{
+    margin-left: 7px;
+}
+.banner_wrap .point_wrap .point .point_box .c{
+    float: right;
+}
+
+/*轮播图图片*/
+.banner_wrap .bannerWrap .banner{
+    width: 100%;
+    height: 593px;
+    position: absolute;
+}
+.banner_wrap .bannerWrap .banner_01{
+    background: url("../images/banner01_bg.jpg") center top;
+}
+.banner_wrap .bannerWrap .banner_02{
+    background: url("../images/banner02_bg.jpg") center top;
+}
+.banner_wrap .bannerWrap .banner_01 .banner_img01{
+    position: absolute;
+    top:208px;
+    left: 426px;
+}
+.banner_wrap .bannerWrap .banner_01 .banner_img02{
+    position: absolute;
+    top:303px;
+    left: 454px;
+}
+.banner_wrap .bannerWrap .banner_01 .banner_img03{
+    position: absolute;
+    top:354px;
+    left: 454px;
+}
+
+.banner_wrap .bannerWrap .banner_02 .banner_img02{
+    position: absolute;
+    top:56px;
+    left: 392px;
+}
+.banner_wrap .bannerWrap .banner_02 .banner_img01{
+    position: absolute;
+    top:178px;
+    left: 144px;
+}
+.banner_wrap .bannerWrap .banner_02 .banner_img03{
+    position: absolute;
+    top:194px;
+    left: 350px;
+}
+/* banner结束*/
+
+
+
+/*主要产品开始*/
+.product_wrap.w{
+    height: 1000px;
+    /*background-color: pink;*/
+    position: relative;
+    margin-top: 50px;
+}
+.product_wrap .goOn{
+    margin:0 auto;
+    display: block;
+}
+.product_wrap>h2{
+    margin-top: 62px;
+    font-size: 54px;
+    font-family: "华文楷体";
+    color: #301759;
+    text-align: center;
+}
+.product_wrap h3{
+    font-size: 18px;
+    font-family: Arial;
+    color: #301759;
+    text-align: center;
+}
+.product_wrap .point_img{
+    display: block;
+    margin: 0 auto;
+    margin-top: 22px;
+}
+.product_wrap .content{
+    height:436px;
+    /*background-color: red;*/
+    margin-top:70px;
+    position: relative;
+}
+
+/*左边的按钮列表*/
+.product_wrap .content .point_left{
+    width: 24px;
+    height:380px;
+    position: relative;
+    top:24px;
+    float: left;
+    background: url("../images/chanpin_nowline_bgline.png") repeat-y center top ;
+}
+.product_wrap .content .point_left .line{
+    width: 100%;
+    height: 11px;
+    /*background-color: darkblue;*/
+    margin-bottom: 63px;
+    position: relative;
+}
+
+.product_wrap .content .point_left .line i{
+    width: 100%;
+    height: 19px;
+    background: url("../images/chanpin_nowline_daquan.png") center top no-repeat;
+    display: block;
+    position: absolute;
+    top:-4px;
+    display: none;
+}
+.product_wrap .content .point_left .line span{
+    width: 100%;
+    height:11px;
+    background: url("../images/chanpin_nowline_xiaoquan.png") no-repeat center top;
+    display: block;
+}
+
+.product_wrap .content .point_left .now i{
+    display: block;
+}
+.product_wrap .content .point_left .now span{
+    display: none;
+}
+.product_wrap .content .point_left .line:hover span{
+    animation: img_psn 0.5s forwards;
+}
+
+@keyframes img_psn {
+    0%{
+        background-position: center 0;
+    }
+    100%{
+        background-position: center -11px;
+    }
+}
+
+
+/*中间左右按钮*/
+
+.product_wrap .content .leftRight_point{
+    width: 611px;
+    height: 30px;
+    /*background-color: red;*/
+    position: absolute;
+    top:238px;
+    right:3px;
+    background: url("../images/next&prev_line.png") repeat-x left center;
+}
+.product_wrap .content .leftRight_point .zuo{
+    width: 29px;
+    height: 29px;
+    background: url("../images/prev_jiantou.png");
+    float: left;
+    display: block;
+}
+.product_wrap .content .leftRight_point .you{
+    width: 29px;
+    height: 29px;
+    background: url("../images/next_jiantou.png");
+    float: right;
+    display: block;
+}
+.product_wrap .content .leftRight_point .zuo:hover{
+    background: url("../images/prev_jiantou_hover.png");
+}
+.product_wrap .content .leftRight_point .you:hover{
+    background: url("../images/next_jiantou_hover.png");
+}
+
+
+
+.product_wrap .content .content_right{
+    width: 1021px;
+    height: 100%;
+    /*background-color: black;*/
+    float: right;
+    position: relative;
+}
+
+.product_wrap .content .content_right .content01{
+    position: absolute;
+    top:0px;
+    left: 0px;
+    display: none;
+    width: 1021px;
+}
+.product_wrap .content .content_right .content01.now{
+    display: block;
+}
+.product_wrap .content .content_right .content01>.contentLeft{
+    float: left;
+}
+.product_wrap .content .content_right .content01>.contentRight{
+    float: right;
+    width: 614px;
+    height: 436px;
+    /*background-color: purple;*/
+}
+
+.product_wrap .content .content_right .content01>.contentRight h2.tittle{
+    font-size: 30px;
+    font-family: "华文楷体";
+    width: 100%;
+    height: 61px;
+    color: #301759;
+    background:url("../images/pen_line.png") no-repeat left bottom;
+    position: relative;
+}
+.product_wrap .content .content_right .content01>.contentRight h2.tittle span{
+    width: 61px;
+    height: 54px;
+    display: block;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    background: url("../images/pen.png");
+}
+.product_wrap .content .content_right .content01>.contentRight .top{
+    width: 610px;
+    height: 142px;
+    /*background-color: pink;*/
+    padding-top: 35px;
+}
+.product_wrap .content .content_right .content01>.contentRight .top .img_ico{
+    float: left;
+    margin-left: 10px;
+}
+
+.product_wrap .content .content_right .content01>.contentRight .top .text{
+    float: right;
+    width: 474px;
+    color: #6B6A6E;
+
+}
+.product_wrap  .content01>.contentRight .top .text h2{
+    font-size: 24px;
+    font-family: "华文楷体";
+}
+.product_wrap  .content01>.contentRight .top .text p{
+    height: 23px;
+    line-height: 23px;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.product_wrap .content .content_right .content01>.contentRight .bottom{
+    width: 610px;
+    height: 141px;
+    /*background-color: pink;*/
+    margin-top: 30px;
+    padding-top: 27px;
+    position: relative;
+}
+
+.product_wrap .content .content_right .content01>.contentRight .bottom p{
+    height: 24px;
+    line-height: 24px;
+    font-size: 14px;
+    font-family:"华文楷体";
+}
+.product_wrap .content .content_right .content01>.contentRight .bottom h3{
+    width: 216px;
+    height: 52px;
+    color: #6B696F;
+    font-size: 18px;
+    font-family: "华文楷体";
+    text-align: center;
+    line-height: 52px;
+    background: url("../images/yinhao_zuo.png") no-repeat left top,url("../images/yinhao_you.png") no-repeat right bottom;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+
+
+
+

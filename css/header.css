@@ -1,0 +1,104 @@
+
+
+
+/*头部CSS样式表*/
+.header_wrap{
+    background: #2D1947 url("../images/header_bg.jpg") no-repeat top center;
+    min-width: 1100px;
+}
+.header_wrap .header{
+    height: 120px;
+}
+
+
+
+/*logo开始*/
+.header_wrap .header .logo{
+    float: left;
+}
+.header_wrap .header .logo a {
+    text-indent: -999999px;
+    background: url("../images/logo.png");
+    display: block;
+    width: 376px;
+    height: 120px;
+}
+
+
+/*logo结束*/
+
+/*导航开始*/
+.header_wrap .nav_wrap{
+    float: right;
+
+}
+.header_wrap .nav_wrap .nav{
+    float: left;
+    margin-top: 45px;
+    position: relative;
+    z-index: 9999;
+
+}
+.header_wrap .nav_wrap .nav h1{
+    color: #fff;
+    font-size: 16px;
+    padding: 0 15px;
+    height: 30px;
+    position: relative;
+}
+
+.header_wrap .nav_wrap .nav h1.now{
+    background: url("../images/nav_now_bg.png") no-repeat bottom center;
+}
+
+.header_wrap  h1 span{
+    height: 25px;
+    width:25px;
+    background: url("../images/nav_xiajiantou.png") right;
+    display: block;
+    position: absolute;
+    top: -3px;
+    right: 8px;
+}
+.header_wrap  h1:hover{
+    background: url("../images/nav_now_bg.png") no-repeat bottom center ;
+}
+.header_wrap  h1:hover span{
+    background: url("../images/nav_xiajiantou_hover.png") right;
+}
+.header_wrap .nav_wrap .nav .hasDown {
+    padding: 0 40px 0 15px;
+}
+
+.header_wrap .nav_wrap .nav ul{
+    background-color: #36264A;
+    width: 180px;
+    position: absolute;
+    top:30px;
+    left: 0px;
+    display: none;
+    z-index: 9999;
+
+}
+.header_wrap .nav_wrap .nav ul li{
+    height: 40px;
+    padding-left: 30px;
+    line-height: 40px;
+    color: #FFFFED;
+    transition:padding-left 0.4s;
+}
+.header_wrap .nav_wrap .nav ul li:hover {
+    background: #049DEA url("../images/nav_li_bg.png") no-repeat 150px center;
+    padding-left: 40px;
+    transition:padding-left 0.4s;
+
+}
+
+
+
+
+
+
+
+
+

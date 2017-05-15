@@ -1,0 +1,45 @@
+/*
+        清除浏览器默认样式,让所有的标签在浏览器默认情况下显示一致
+*/
+
+body,ul,li,ol,dl,dt,dd,div,h1,h2,h3,h4,h5,h6,p{
+    margin: 0;
+    padding: 0;
+}
+/*定义版心*/
+.w{
+    width: 1100px;
+    margin: 0 auto;
+}
+
+a{
+    text-decoration: none; /*清除下划线*/
+    cursor: pointer;
+}
+/*li标签的小圆点*/
+ul li{
+    list-style: none;
+}
+
+img{
+    border: 0 none; /*在ie低版本中会有一个默认的1px边框*/
+}
+/*清除浮动*/
+.clearfix:after{
+    content: ".";
+    height: 0;
+    line-height: 0;
+    display: block;
+    /*隐藏占位置*/
+    visibility: hidden;
+    clear: both;
+}
+.clearfix{
+    zoom: 1;
+}
+/*主题*/
+body{
+    font-size: 15px;
+    font-family: STKaiti,KaiTi_GB2312,”华文楷体”,”宋体”，Arial,”Heivetica”;
+    background: #f1f2f6;
+}
