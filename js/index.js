@@ -17,12 +17,14 @@ $(function () {
            imgEasing();
        }
         function imgEasing() {
-            $(".banner").eq(inow).find("img").eq(0).addClass("animated fadeInLeft")
-            $(".banner").eq(inow).find("img").eq(1).addClass("animated fadeInRight")
-            $(".banner").eq(inow).find("img").eq(2).addClass("animated fadeInUp")
             $(".banner").eq(inow).siblings().find("img").eq(0).removeClass("animated fadeInLeft")
             $(".banner").eq(inow).siblings().find("img").eq(1).removeClass("animated fadeInRight")
             $(".banner").eq(inow).siblings().find("img").eq(2).removeClass("animated fadeInUp")
+
+            $(".banner").eq(inow).find("img").eq(0).addClass("animated fadeInLeft")
+            $(".banner").eq(inow).find("img").eq(1).addClass("animated fadeInRight")
+            $(".banner").eq(inow).find("img").eq(2).addClass("animated fadeInUp")
+
         }
         //    左按钮
         $(".point_wrap ._prev").click(function () {
