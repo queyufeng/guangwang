@@ -116,6 +116,65 @@ $(function () {
             $lines.eq(IndexNum).addClass("now").siblings().removeClass("now")
             $contents.eq(IndexNum).addClass("now animated "+a).siblings().removeClass("now animated "+a)
         }
+    })();
+
+
+    /*业务模块*/
+
+    !(function () {
+
+        var $centerimg=$(".centerimg");
+
+        var $search_img=$(".search_img")
+
+        var $content=$(".business_wrap").find(".content")
+
+        var $bottom=$(".business_wrap .content>.bottom")
+        /*把 $search_img 放到 $centerimg的集合中*/
+
+        $centerimg.add($search_img).hover(function () {
+
+            $(this).addClass("animated tada")
+        },function () {
+            $(this).removeClass("animated tada")
+        })
+  /*
+  *   点击$search_img ,让他的图片改变,让他相对于的slide打开
+  *
+  *           点击他的时候,其他的关闭
+  *           如果当期是打开的,我让他关闭.如果是关闭的,我让他打开
+  *
+  * */
+        $search_img.each(function (i,ele) {
+            $(this).click(function () {
+                slideImg(i)
+            })
+        })
+        $centerimg.each(function (i,ele) {
+            $(this).click(function () {
+                slideImg(i)
+            })
+        })
+
+        /*
+         * 判断右边图标是否有now这个类名,有的话说明相对应的slide是打开的
+         *               如果是打开的,我们应该让他关闭,并且当前图标还原回去
+         *
+         * 没有的话说明是关闭的
+         *
+         *               如果是关闭的,我们应该让他相对应的打开,并且切换图片(切换图片位置通过添加类名now来控制)
+         * */
+        function slideImg(i) {
+
+            if($search_img.eq(i).hasClass("now")){  //hasClass 是用来判断某个元素是否具有某个类名
+                $bottom.eq(i).slideUp();
+                $search_img.eq(i).removeClass("now")
+            }else {
+                $bottom.slideUp().delay(300).eq(i).slideDown();    //没有类名我们让所有的都先关闭,然后让当前的打开
+                $search_img.removeClass("now").eq(i).addClass("now")   //让所有的都删除类名,然后让当前的添加类名
+            }
+
+        }
     })()
 
 

@@ -539,4 +539,109 @@
 .jianjie_wrap .content .leftRight_point span.you,.jianjie_wrap .content .leftRight_point span.zuo{
     display: none;
 }
+.business>img{
+    margin: 0 auto;
+    display: block;
+}
+.business>h2,.business>h3{
+    color: #301759;
+    text-align: center;
+}
+.business>h2{
+    font:54px "华文楷体";
+    margin-top: 23px;
+}
+.business>h3 {
+    font:18px Arial;
+    margin-bottom: 15px;
+}
+
+.business_wrap .content{
+    width: 100%;
+    border-bottom: 2px dashed #E0E0E2;
+}
+.business_wrap .content .top{
+    padding-top: 53px;
+    padding-bottom: 66px;
+}
+.business_wrap .content .top>*{
+    float: left;
+    height: 118px;
+
+}
+
+.business_wrap .content .top .number{
+    font: 90px "宋体";
+    color: #AEAEB3;
+    line-height: 118px;
+    margin-right: 43px;
+}
+.business_wrap .content .top .tittle{
+    width: 304px;
+    text-align: right;
+    margin-top: 30px;
+}
+.business_wrap .content .top .tittle h2{
+    font:24px "华文楷体";
+    color: #5D556F;
+}
+.business_wrap .content .top .tittle p{
+    font:14px "华文楷体";
+    color: #5D556F;
+}
+.business_wrap .content .top .centerimg{
+    margin: 0 44px 0 57px;
+
+}
+.business_wrap .content .top .description{
+    margin-top: 27px;
+}
+.business_wrap .content .top .description p{
+    width: 312px;
+    color: #AEAEB3;
+    font:14px "华文楷体";
+    height: 24px;
+    line-height: 24px;
+}
+.business_wrap .content .top .search_img{
+    width: 67px;
+    height: 67px;
+    float: right;
+    background: url("../images/business_zhankaishouqi.png");
+    margin-top: 28px;
+}
+.business_wrap .content .top .now{
+    animation: search_img 0.5s;
+    animation-fill-mode:forwards;
+}
+
+@keyframes search_img {
+    0%{
+        background-position: 0 0px;
+    }
+    100%{
+        background-position: 0 -67px;
+    }
+}
+.business_wrap .content .bottom{
+    width: 784px;
+    height: 190px;
+    margin: 0 auto;
+    display: none;
+    /*background-color: red;*/
+}
+.business_wrap .content .bottom p{
+    color: #6B696F;
+    font: 14px "华文楷体";
+    line-height: 26px;
+    margin-bottom: 34px;
+    display: block;
+}
+
+
+
+
+
+
+
 
