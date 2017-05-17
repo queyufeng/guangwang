@@ -500,15 +500,165 @@
     </div>
 
 
+    <!--合作机构-->
+    <div class="hezuo_wrap">
+        <div class="mokuai">
+            <img src="images/hezuo_topbg.png" />
+            <h1 style="margin-top:75px; line-height:60px;">合作机构</h1>
+            <h2>Our Partners</h2>
+            <img style="margin-top:20px; margin-bottom:40px;" src="images/three_points01.png" />
+
+            <!--内容-->
+            <div class="hezuocontent_wrap w">
+                <div class="partners">
+                    <h1 style="line-height:50px;">合作机构</h1>
+                    <h2>Our Partners</h2>
+                    <div class="partners_box">
+                        <div><a href="javascript:;"><img src="images/pLogo01.png" /></a></div>
+                        <div><a href="javascript:;"><img src="images/pLogo02.png" /></a></div>
+                        <div><a href="javascript:;"><img src="images/pLogo03.png" /></a></div>
+                        <div><a href="javascript:;"><img src="images/pLogo04.png" /></a></div>
+                        <div><a href="javascript:;"><img src="images/pLogo05.png" /></a></div>
+                        <div><a href="javascript:;"><img src="images/pLogo06.png" /></a></div>
+                    </div>
+                </div>
+                <div class="users">
+                    <h1 style="line-height:50px;">用户</h1>
+                    <h2>3000+</h2>
+                    <a href="javascript:;" class="more"></a>
+                    <div class="users_box">
+                        <div><a href="javascript:;"><img src="images/uLogo01.png" /></a></div>
+                        <div><a href="javascript:;"><img src="images/uLogo02.png" /></a></div>
+                        <div><a href="javascript:;"><img src="images/uLogo03.png" /></a></div>
+                        <div><a href="javascript:;"><img src="images/uLogo04.png" /></a></div>
+                        <div><a href="javascript:;"><img src="images/uLogo05.png" /></a></div>
+                        <div><a href="javascript:;"><img src="images/uLogo06.png" /></a></div>
+                    </div>
+                </div>
+            </div>
+
+            <img src="images/hezuo_bottombg.png" />
+        </div>
+    </div>
+
+    <!--联系我们-->
+    <div class="mokuai lianxi">
+        <h1 style="margin-top:50px; line-height:60px;">联系我们</h1>
+        <h2>Contact Us</h2>
+        <img style="margin-top:20px; margin-bottom:40px;" src="images/three_points01.png" />
+
+        <div class="input_wrap w">
+            <form>
+                <div class="input_box" style="width:345px; margin-right:27px"><i class="icon"></i><input type="text" placeholder="*名字" /></div>
+                <div class="input_box" style="width:345px; margin-right:39px"><i class="icon" style="background-position:-31px 14px"></i><input type="text" placeholder="*邮箱" /></div>
+                <div class="input_box"><i class="icon" style="background-position:-79px 14px"></i><input type="text" placeholder="联系电话" /></div>
+                <div class="input_box textarea_box"><i class="icon" style="background-position:-128px 14px"></i><textarea placeholder="*说点儿什么吧"></textarea></div>
+                <div class="shuomin" style="color:#7f7d83; height:86px; width:339px; float:left;"><span style="color:red">*</span>亲，留言的时候，要请留下你的姓名和联系方式哦~</div>
+                <div class="shuomin2" style="color:#605f64; font-size:18px; height:72px; width:339px; float:left;">谢谢你的留言，我们将及时回复！</div>
+                <div class="input_box sentbtn_box" style="width:331px;"><i class="icon"></i><span>发送留言</span></div>
+            </form>
+        </div>
+
+        <div class="lianxi_ways w">
+            <div class="way_one">
+                <img src="images/lianxi_icon01.png" />
+                <div class="way_content">
+                    <h1>地址</h1>
+                    <p>北京市昌平区站前东街2号</p>
+                    <p>回龙观田园风光综合商业楼3层</p>
+                    <p>邮编：100081</p>
+                </div>
+            </div>
+            <div class="way_one" style="margin:0 32px;">
+                <img src="images/lianxi_icon02.png" />
+                <div class="way_content">
+                    <h1>电话</h1>
+                    <p style="margin-top:40px;">总机：010-8888888</p>
+                </div>
+            </div>
+            <div class="way_one">
+                <img src="images/lianxi_icon03.png" />
+                <div class="way_content">
+                    <h1>网络途径</h1>
+                    <p>邮箱：cp@feicuiedu.com</p>
+                    <p>微博：aaaaaaa_sina</p>
+                    <p>微信：ccccccc_weixin</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
 
 
-
-
+     <div class="map_wrap">
+         <div class="top_img"><img src="./images/map_topimg.png" alt=""></div>
+         <div id="map"></div>
+         <div class="bottom_img"></div>
+     </div>   
 
 
      <!--底部-->
     <div style="height: 200px;width: 100%;background-color:pink;"></div>
 
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=GDquG1YOGt5N3qe4VDLsNM8Y9pPCje5x"></script>
+
+    <script type="text/javascript">
+        //创建和初始化地图函数：
+        function initMap(){
+            createMap();//创建地图
+            setMapEvent();//设置地图事件
+            addMapControl();//向地图添加控件
+            addMapOverlay();//向地图添加覆盖物
+        }
+        function createMap(){
+            map = new BMap.Map("map");
+            map.centerAndZoom(new BMap.Point(117.194906,39.146077),17);
+        }
+        function setMapEvent(){
+            map.enableScrollWheelZoom();
+            map.enableKeyboard();
+            map.enableDragging();
+            map.enableDoubleClickZoom()
+        }
+        function addClickHandler(target,window){
+            target.addEventListener("click",function(){
+                target.openInfoWindow(window);
+            });
+        }
+        function addMapOverlay(){
+            var markers = [
+                {content:"天津卓运天成科技有限公司",title:"卓运天成",imageOffset: {width:-46,height:-21},position:{lat:39.146675,lng:117.195095}}
+            ];
+            for(var index = 0; index < markers.length; index++ ){
+                var point = new BMap.Point(markers[index].position.lng,markers[index].position.lat);
+                var marker = new BMap.Marker(point,{icon:new BMap.Icon("http://api.map.baidu.com/lbsapi/createmap/images/icon.png",new BMap.Size(20,25),{
+                    imageOffset: new BMap.Size(markers[index].imageOffset.width,markers[index].imageOffset.height)
+                })});
+                var label = new BMap.Label(markers[index].title,{offset: new BMap.Size(25,5)});
+                var opts = {
+                    width: 200,
+                    title: markers[index].title,
+                    enableMessage: false
+                };
+                var infoWindow = new BMap.InfoWindow(markers[index].content,opts);
+                marker.setLabel(label);
+                addClickHandler(marker,infoWindow);
+                map.addOverlay(marker);
+            };
+        }
+        //向地图添加控件
+        function addMapControl(){
+            var scaleControl = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+            scaleControl.setUnit(BMAP_UNIT_IMPERIAL);
+            map.addControl(scaleControl);
+            var navControl = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+            map.addControl(navControl);
+            var overviewControl = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:true});
+            map.addControl(overviewControl);
+        }
+        var map;
+        initMap();
+    </script>
 
 </body>
 </html>
