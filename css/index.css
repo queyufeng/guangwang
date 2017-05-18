@@ -1045,31 +1045,37 @@
 
 
 /*地图模块*/
-
-.map_wrap{
-    min-width: 1100px;
+.map_wrap {
+    height: 662px;
     position: relative;
-}
 
-.map_wrap .top_img{
+}
+.map_wrap .map_top{
     position: absolute;
-    top: 0px;
+    top: 0;
     left: 50%;
-    margin-left: -550px;
+    margin-left: -550px;;
+    z-index: 1000;
 }
 .map_wrap #map{
-    width:100%;
-    height: 500px;
-    background-color: red;
-}
-.map_wrap .bottom_img{
-    width: 100%;
-    height: 33px;
     position: absolute;
     left: 0;
-    bottom: 0;
-    background: url("../images/map_bottomimg.png") no-repeat center top;
+    top: 0;
+    width: 100%;
+    height: 662px;
+    /*background-color: red;*/
+
 }
+
+.map_wrap .bottom_map{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: url("../images/map_bottomimg.png") no-repeat center bottom;
+    height: 33px;
+    width: 100%;
+}
+
 
 
 

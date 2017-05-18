@@ -15,6 +15,7 @@
     <script src="js/jquery-1.8.3.min.js"></script>
     <script src="js/easing.js"></script>
     <script src="js/index.js"></script>
+    <script src="js/scrollTop.js"></script>
 </head>
 <body>
     <!--导航部分-->
@@ -589,64 +590,71 @@
 
     </div>
 
+    <!-- 百度地图-->
 
-     <div class="map_wrap">
-         <div class="top_img"><img src="./images/map_topimg.png" alt=""></div>
-         <div id="map"></div>
-         <div class="bottom_img"></div>
-     </div>   
+    <div class="map_wrap">
+        <div class="map_top w"><img src="./images/map_topimg.png" alt=""></div>
+        <div id="map"></div>
+        <div class="bottom_map"></div>
+    </div>
 
 
-     <!--底部-->
-    <div style="height: 200px;width: 100%;background-color:pink;"></div>
+    <!--底部-->
 
-    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=GDquG1YOGt5N3qe4VDLsNM8Y9pPCje5x"></script>
+    <div id="footer"></div>
+
+
+    <!--返回顶部-->
+    <div class="scroll_top">
+        <div class="top"></div>
+        <div class="bottom"></div>
+    </div>
+
+
+
+
+
+
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=i5ZFlrGGRUAe1hbQxcmcYIMIHAGlrrpY"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.js"></script>
+    <link rel="stylesheet" href="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.css" />
+
+
 
     <script type="text/javascript">
-        //创建和初始化地图函数：
-        function initMap(){
-            createMap();//创建地图
-            setMapEvent();//设置地图事件
-            addMapControl();//向地图添加控件
-            addMapOverlay();//向地图添加覆盖物
-        }
-        function createMap(){
-            map = new BMap.Map("map");
-            map.centerAndZoom(new BMap.Point(117.194906,39.146077),17);
-        }
-        function setMapEvent(){
-            map.enableScrollWheelZoom();
-            map.enableKeyboard();
-            map.enableDragging();
-            map.enableDoubleClickZoom()
-        }
-        function addClickHandler(target,window){
-            target.addEventListener("click",function(){
-                target.openInfoWindow(window);
-            });
-        }
-        function addMapOverlay(){
-            var markers = [
-                {content:"天津卓运天成科技有限公司",title:"卓运天成",imageOffset: {width:-46,height:-21},position:{lat:39.146675,lng:117.195095}}
-            ];
-            for(var index = 0; index < markers.length; index++ ){
-                var point = new BMap.Point(markers[index].position.lng,markers[index].position.lat);
-                var marker = new BMap.Marker(point,{icon:new BMap.Icon("http://api.map.baidu.com/lbsapi/createmap/images/icon.png",new BMap.Size(20,25),{
-                    imageOffset: new BMap.Size(markers[index].imageOffset.width,markers[index].imageOffset.height)
-                })});
-                var label = new BMap.Label(markers[index].title,{offset: new BMap.Size(25,5)});
-                var opts = {
-                    width: 200,
-                    title: markers[index].title,
-                    enableMessage: false
-                };
-                var infoWindow = new BMap.InfoWindow(markers[index].content,opts);
-                marker.setLabel(label);
-                addClickHandler(marker,infoWindow);
-                map.addOverlay(marker);
-            };
-        }
-        //向地图添加控件
+        // 百度地图API功能
+        var map = new BMap.Map('map');
+        var poi = new BMap.Point(117.195144,39.146633);
+        map.centerAndZoom(poi, 17);
+        map.enableScrollWheelZoom();
+
+        var content = '<div style="margin:0;line-height:20px;padding:2px;">' +
+            '<img src="./images/xiaoniao_icon.png" alt="" style="float:right;zoom:1;overflow:hidden;width:100px;height:100px;margin-left:3px;"/>' +
+            '地址：天津市南开区不管什么地方<br/>电话：15222691835<br/>简介：百度大厦位于北京市海淀区西二旗地铁站附近，为百度公司综合研发及办公总部。' +
+            '</div>';
+
+        //创建检索信息窗口对象
+        var searchInfoWindow = null;
+        searchInfoWindow = new BMapLib.SearchInfoWindow(map, content, {
+            title  : "卓运天成",      //标题
+            width  : 290,             //宽度
+            height : 105,              //高度
+            panel  : "panel",         //检索结果面板
+            enableAutoPan : true,     //自动平移
+            searchTypes   :[
+                BMAPLIB_TAB_SEARCH,   //周边检索
+                BMAPLIB_TAB_TO_HERE,  //到这里去
+                BMAPLIB_TAB_FROM_HERE //从这里出发
+            ]
+        });
+        var marker = new BMap.Marker(poi); //创建marker对象
+        marker.enableDragging(); //marker可拖拽
+        marker.addEventListener("click", function(e){
+            searchInfoWindow.open(marker);
+        })
+        map.addOverlay(marker); //在地图中添加marker
+
+        /*添加地图控件*/
         function addMapControl(){
             var scaleControl = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
             scaleControl.setUnit(BMAP_UNIT_IMPERIAL);
@@ -656,9 +664,11 @@
             var overviewControl = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:true});
             map.addControl(overviewControl);
         }
-        var map;
-        initMap();
-    </script>
+        addMapControl()
+        map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
+        marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
+
+     </script>
 
 </body>
 </html>

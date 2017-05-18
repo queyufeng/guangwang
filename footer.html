@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <script src="./js/jquery-1.8.3.min.js"></script>
+</head>
+<body>
+
+    <div class="footer">
+        <div class="top w">
+
+            <div class="music">
+                <span class="music01" style="background:url('./images/yinyue_duo.png');"></span>
+                <span class="music02" style="background:url('./images/yinyue_lai.png');"></span>
+                <span class="music03" style="background:url('./images/yinyue_mi.png');"></span>
+                <span class="music04" style="background:url('./images/yinyue_fa.png');"></span>
+                <span class="music05" style="background:url('./images/yinyue_suo.png');"></span>
+                <span class="music06" style="background:url('./images/yinyue_la.png');"></span>
+                <span class="music07" style="background:url('./images/yinyue_xi.png');"></span>
+            </div>
+
+        </div>
+        <div class="bottom w">蜀ICP备16002451号</div>
+    </div>
+    <script>
+        $(function () {
+
+            $(".music span").click(function () {
+               //   var $this=$(this);
+                var   $index=$(this).index();
+
+                $("body").append("<embed width='0' height='0' class='music0_"+$index+"'"+"src='./music/sound0"+$index+".mp3'/>")
+
+                setTimeout(function () {
+//                   $(".music0_"+$this.index()).remove();
+                    $(".music0_"+$index).remove();
+                },3000)
+
+
+            })
+        })
+    </script>
+</body>
+</html>

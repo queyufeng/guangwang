@@ -3,6 +3,8 @@ $(function () {
 
     /*头部*/
     $("#head").load("header.html"); //底层用的AJAX, 要用服务器方式打开 //如果不想用服务器,只能用火狐
+    /*底部*/
+    $("#footer").load("footer.html"); //底层用的AJAX, 要用服务器方式打开 //如果不想用服务器,只能用火狐
 
     // banner
     (function () {
