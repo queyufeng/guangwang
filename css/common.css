@@ -207,6 +207,7 @@ body{
     right: 50px;
     bottom: 158px;
     display: none;
+    z-index: 9999;
     /*background-color: red;*/
 }
 .scroll_top .top{
@@ -214,6 +215,7 @@ body{
     height: 51px;
     margin: 0 auto;
     border-radius: 50%;
+    z-index: 9999;
     /*background-color: yellow;*/
     background: url("../images/scroll_top_bg.png") no-repeat left top;
 }

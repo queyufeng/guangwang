@@ -4,6 +4,7 @@
 .footer {
     width: 100%;
     height: 344px;
+    z-index: 1;
     background: url("../images/yinyue_bg.jpg") no-repeat left top;
 }
 .footer .top{

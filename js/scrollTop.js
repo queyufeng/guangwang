@@ -26,9 +26,9 @@ $(function () {
                 $top.parent().css({"bottom":"158px","display":"none"})
             })
 
-            $("body,html").scrollTop(0)
-
-
+            $("body,html").animate({
+                "scrollTop":0
+            },1000)
 
         })
 
